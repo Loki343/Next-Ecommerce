@@ -1,6 +1,6 @@
 "use client";
 import SingleProduct from '@/components/SingleProduct'
-import { useSupabase } from '@/lib/supabase/hooks/useSupabase';
+import { useSupabase } from '@/lib/hooks/useSupabase';
 import { useParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 

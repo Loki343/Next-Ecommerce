@@ -1,6 +1,6 @@
 "use client";
 import SearchResult from '@/components/SearchResult';
-import { useSupabase } from '@/lib/supabase/hooks/useSupabase';
+import { useSupabase } from '@/lib/hooks/useSupabase';
 import { useParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 
@@ -11,7 +11,7 @@ const page = () => {
     useEffect(() => {
         getFilteredData(query.toString())
     }, [])
-    
+
     return (
         <div className="text-black">
             <SearchResult filteredData={filteredData} />

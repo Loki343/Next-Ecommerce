@@ -12,7 +12,7 @@ const itemList = [
 ];
 
 const Header = () => {
-   const [query, setQuery] = useState<string>("");
+   const [query, setQuery] = useState("");
    const router = useRouter();
    const handleSearch = () => {
       router.push(`/search/${query}`);

@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductCard from './ProductCard'
 
-const SearchResult = ({ filteredData }: { filteredData: any }) => {
+const SearchResult = ({ filteredData }) => {
     return (
         <div className='w-[80%] mx-auto'>
             <div className='mt-10'>
@@ -11,7 +11,7 @@ const SearchResult = ({ filteredData }: { filteredData: any }) => {
                 </div>
                 <div className='grid grid-cols-4 gap-2'>
                     {
-                        filteredData.map((prod: any, idx: number) => {
+                        filteredData.map((prod, idx) => {
                             return (
                                 <div key={idx}>
                                     <ProductCard product={prod} />
