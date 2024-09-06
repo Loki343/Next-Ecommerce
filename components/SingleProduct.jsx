@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
-import Rating from './shared/Rating';
+import Rating from './Rating';
 import AddToCartContainer from './AddToCartContainer';
 
 const SingleProduct = ({ singleProduct }) => {
-    console.log(singleProduct)
     return (
         <div className='w-[90%] mx-auto mt-10'>
             <div className='flex justify-between'>
-                <div className='w-[90%]'>
-                    {singleProduct.map((el) => (
+
+                {singleProduct.map((el) => (
+                    <div className='flex'>
                         <div className='flex'>
                             <div className='bg-gray-100 h-fit'>
                                 <Image src={el.image} width={200} height={200} alt={el.title} className='mix-blend-multiply p-4' />
@@ -27,9 +27,9 @@ const SingleProduct = ({ singleProduct }) => {
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
-                <AddToCartContainer />
+                        <AddToCartContainer product={el} />
+                    </div>
+                ))}
             </div>
         </div>
     )

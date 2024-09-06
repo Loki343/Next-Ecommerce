@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import ratingImg from "../../public/star-icon.png"
+import ratingImg from "../public/star-icon.png"
 import Image from 'next/image';
 
 const Rating = ({ product }) => {
